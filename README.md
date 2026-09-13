@@ -1,2 +1,2 @@
 # oppa
-love
+love .
