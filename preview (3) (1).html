@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Oppa 💙</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Poppins", Arial, sans-serif;
+      background: linear-gradient(135deg, #dff6ff, #ffe4f1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .hearts {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+    }
+
+    .heart {
+      position: absolute;
+      font-size: 25px;
+      animation: float 7s linear infinite;
+      opacity: 0.7;
+    }
+
+    .heart:nth-child(1) { left: 10%; animation-delay: 0s; }
+    .heart:nth-child(2) { left: 30%; animation-delay: 2s; }
+    .heart:nth-child(3) { left: 55%; animation-delay: 4s; }
+    .heart:nth-child(4) { left: 80%; animation-delay: 1s; }
+    .heart:nth-child(5) { left: 90%; animation-delay: 3s; }
+
+    @keyframes float {
+      0% {
+        bottom: -50px;
+        transform: translateX(0) rotate(0deg);
+      }
+      100% {
+        bottom: 110%;
+        transform: translateX(40px) rotate(360deg);
+      }
+    }
+
+    .card {
+      width: 90%;
+      max-width: 600px;
+      padding: 40px 25px;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.75);
+      border-radius: 30px;
+      box-shadow: 0 15px 40px rgba(100, 150, 180, 0.25);
+      backdrop-filter: blur(10px);
+      z-index: 2;
+    }
+
+    .emoji {
+      font-size: 55px;
+      margin-bottom: 5px;
+    }
+
+    h1 {
+      color: #4d9fc4;
+      margin: 5px 0;
+      font-size: 34px;
+    }
+
+    .subtitle {
+      color: #e58aad;
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+
+    button {
+      border: none;
+      padding: 15px 28px;
+      border-radius: 50px;
+      background: linear-gradient(90deg, #83d8f5, #f5a9c7);
+      color: white;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(200, 130, 170, 0.25);
+      transition: transform 0.2s;
+    }
+
+    button:hover {
+      transform: scale(1.06);
+    }
+
+    #message {
+      display: none;
+      margin-top: 28px;
+      color: #555;
+      font-size: 16px;
+      line-height: 1.8;
+      text-align: left;
+    }
+
+    #message.show {
+      display: block;
+      animation: appear 1s ease;
+    }
+
+    @keyframes appear {
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .signature {
+      text-align: center;
+      color: #e58aad;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="hearts">
+    <div class="heart">💙</div>
+    <div class="heart">💗</div>
+    <div class="heart">💌</div>
+    <div class="heart">🩵</div>
+    <div class="heart">💕</div>
+  </div>
+
+  <div class="card">
+
+    <div class="emoji">💙🩵💗</div>
+
+    <h1>For My Oppa 💌</h1>
+
+    <div class="subtitle">
+      A little surprise for you ✨
+    </div>
+
+    <button onclick="openMessage()">
+      💌 Open Your Surprise 💌
+    </button>
+
+    <div id="message">
+
+      <p>
+        I love you so much, Oppa. 💗
+      </p>
+
+      <p>
+        Sometimes I can't even explain how much you mean to me.
+        You are such a special person in my life, and I'm so grateful
+        for every little moment, every smile, every memory, and every
+        beautiful conversation we share. 🥺💙
+      </p>
+
+      <p>
+        I love you <b>3000</b> and more. ❤️
+        More than words can ever explain.
+      </p>
+
+      <p>
+        I hope our bond stays forever — an infinity bond ♾️ —
+        and that nothing can break the beautiful connection we have.
+        I hope we continue making memories together, laughing together,
+        supporting each other, and being there for one another. 🫶
+      </p>
+
+      <p>
+        May God always bless you, protect you, and keep you happy. 🙏💙
+        Thank you for always trying to make me smile and for bringing
+        happiness into my life.
+      </p>
+
+      <p>
+        No matter what happens, I hope we always keep our love,
+        friendship, memories, and beautiful bond close to our hearts. 💕
+      </p>
+
+      <div class="signature">
+        Forever & Always ♾️💙<br>
+        With lots of love 💗
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    function openMessage() {
+      document.getElementById("message").classList.add("show");
+    }
+  </script>
+
+</body>
+</html>
